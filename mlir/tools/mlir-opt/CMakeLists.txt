@@ -48,6 +48,7 @@ if(MLIR_INCLUDE_TESTS)
     MLIRVectorTestPasses
     MLIRTestVectorToSPIRV
     MLIRLLVMTestPasses
+    MLIRPyDialect
     )
   set(test_libs ${test_libs}
     MLIRTestPDLL
