@@ -31,6 +31,7 @@ if(MLIR_INCLUDE_TESTS)
     MLIRMemRefTestPasses
     MLIRMeshTest
     MLIRNVGPUTestPasses
+    MLIRPyTransforms
     MLIRSCFTestPasses
     MLIRShapeTestPasses
     MLIRSPIRVTestPasses
