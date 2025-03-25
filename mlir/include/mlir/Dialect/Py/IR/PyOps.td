@@ -182,4 +182,16 @@ def PyTypeConstraintOp: Op<Py_Dialect, "type_constraint",[]>{
   let arguments = (ins Py_AnyType:$input, TypeAttr:$type_constraint);
   let assemblyFormat = [{$input attr-dict `:` type($input) `->` $type_constraint}];
 }
+
+def PyConsTypeOp: Op<Py_Dialect, "cons.type",[]>{
+  let summary = "Add a type constraint to a variable.";
+  let arguments = (ins Py_AnyType:$input, StrAttr:$type_name);
+  let assemblyFormat = [{$input `,` $type_name attr-dict `:` type($input) }];
+}
+
+def PyConsTypeElementOp: Op<Py_Dialect, "cons.type.element",[]>{
+  let summary = "Add a type constraint to the inner element of a var.";
+  let arguments = (ins Py_AnyType:$input, StrAttr:$type_name);
+  let assemblyFormat = [{$input `,` $type_name attr-dict `:` type($input) }];
+}
 #endif // PY_OPS

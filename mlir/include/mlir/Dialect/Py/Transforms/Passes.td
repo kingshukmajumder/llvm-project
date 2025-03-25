@@ -11,7 +11,7 @@
 
 include "mlir/Pass/PassBase.td"
 
-def InferTypes : Pass<"py-infer-types"> {
+def InferTypes : Pass<"py-infer-types", "ModuleOp"> {
   let summary = "Performs type inference on Py dialect.";
   let constructor = "mlir::py::createInferTypesPass()";
   let dependentDialects = [
